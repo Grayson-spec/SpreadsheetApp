@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 @Component({
   selector: 'app-create-new-project',
   templateUrl: './create-new-project.component.html',
@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CreateNewProjectComponent implements OnInit {
   projectName?: string;
+  createProjectForm?: FormGroup;
 
   constructor(private http: HttpClient) { }
 

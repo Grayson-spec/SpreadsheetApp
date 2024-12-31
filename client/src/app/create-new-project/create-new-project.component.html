@@ -1,7 +1,20 @@
 <div class="create-project-wrapper">
-    <div class="container">
-        <h1>Create New Project</h1>
-        <input type="text" id="projectName">
-        <button (click)="createProject()">Create</button>
+  <div class="container">
+    <h1>Create New Project</h1>
+    <form [formGroup]="createProjectForm">
+      <div class="form-group">
+        <label for="projectName">Project Name:</label>
+        <input type="text" id="projectName" formControlName="projectName">
       </div>
+      <div class="form-group">
+        <label for="numColumns">Number of Columns:</label>
+        <input type="number" id="numColumns" formControlName="numColumns">
+      </div>
+      <div class="form-group">
+        <label for="numRows">Number of Rows:</label>
+        <input type="number" id="numRows" formControlName="numRows">
+      </div>
+      <button (click)="createProject()">Create Project</button>
+    </form>
+  </div>
 </div>
